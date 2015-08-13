@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.3" client="site" method="upgrade">
+	<name>SP Featured Slider for K2</name>
+	<author>JoomShaper</author>
+	<creationDate>July 2014</creationDate>
+	<copyright>Copyright (C) 2010 - 2014 JoomShaper. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@joomshaper.com</authorEmail>
+	<authorUrl>www.joomshaper.com</authorUrl>
+	<version>1.0.0</version>
+	<description>K2 Featured Item Slider by JoomShaper.com. This module only works with K2 component. The module is fully responsive, in case of resizing its parent container, it is resized too.</description>
+	<files>
+		<filename module="mod_sp_k2_featured_slider">mod_sp_k2_featured_slider.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_sp_k2_featured_slider.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_sp_k2_featured_slider.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_k2/elements/">
+				<field name="catfilter" type="radio" default="0" label="K2_CATEGORY_FILTER">
+					<option value="0">K2_ALL</option>
+					<option value="1">K2_SELECT</option>
+				</field>
+				<field name="category_id" type="categoriesmultiple" default="" label="K2_SELECT_ONE_OR_MORE_CATEGORIES" description="K2_SELECT_ONE_OR_MORE_CATEGORIES_DESC" />
+				<field name="itemCount" type="text" size="4" default="5" label="K2_ITEM_COUNT" />
+				<field name="itemIntroText" type="radio" default="1" label="K2_INTROTEXT" class="btn-group">
+					<option value="0">K2_HIDE</option>
+					<option value="1">K2_SHOW</option>
+				</field>
+				<field name="itemIntroTextWordLimit" type="text" size="4" default="" label="K2_INTROTEXT_WORD_LIMIT" description="K2_INTROTEXT_WORD_LIMIT_DESC"/>
+				<field name="itemImgSize" type="list" default="XLarge" label="K2_IMAGE_SIZE">
+					<option value="XSmall">K2_XSMALL</option>
+					<option value="Small">K2_SMALL</option>
+					<option value="Medium">K2_MEDIUM</option>
+					<option value="Large">K2_LARGE</option>
+					<option value="XLarge">K2_XLARGE</option>
+				</field>
+
+				<field name="itemCategory" type="radio" default="1" label="K2_CATEGORY" class="btn-group">
+					<option value="0">K2_HIDE</option>
+					<option value="1">K2_SHOW</option>
+				</field>
+				<field name="showReadmore" type="radio" default="1" label="SHOW_READMORE" class="btn-group">
+					<option value="0">K2_HIDE</option>
+					<option value="1">K2_SHOW</option>
+				</field>
+				<field name="readmoreText" type="text" default="Read More" label="READMORE_TEXT" />
+				<field name="showFeatured" type="radio" default="1" label="K2_SHOW_FEATURED" class="btn-group">
+					<option value="0">K2_HIDE</option>
+					<option value="1">K2_SHOW</option>
+				</field>
+				<field name="featuredText" type="text" default="Featured" label="K2_FEATURED_TEXT" />
+				<field name="highilightedColor" type="color" default="#d91e18" label="HIGHLIGHTED_COLOR" />
+			</fieldset>
+
+			<fieldset name="animation">
+				<field name="autoPlay" type="radio" default="1" label="AUTO_PLAY" class="btn-group">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="speed" type="text" default="300" label="SLIDE_SPEED" />
+				<field name="autoPlaySpeed" type="text" default="5000" label="SLIDE_INTERVAL" />
+				<field name="transitionStyle" type="list" default="0" label="TRANSITION">
+					<option value="0">TRANSITION_DEFAULT</option>
+					<option value="fade">TRANSITION_FADE</option>
+	                <option value="backSlide">TRANSITION_BACKSLIDE</option>
+	                <option value="goDown">TRANSITION_GODOWN</option>
+	                <option value="fadeUp">TRANSITION_FADEUP</option>
+              	</field>
+              	<field name="showNavigation" type="radio" default="1" label="SHOW_NAVIGATION" class="btn-group">
+					<option value="0">K2_HIDE</option>
+					<option value="1">K2_SHOW</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

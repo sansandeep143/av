@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+  <name>BgMax</name>
+  <version>3.2.3</version>
+	<updateDate>10-01-2015</updateDate>
+  <creationDate>17-03-2011</creationDate>
+  <author>LMC-lomart</author>
+  <authoremail>lomart@lomart.fr</authoremail>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>BGMAX_DESC</description>
+  <description2>merci à www.webbricks.org pour son javascript bgmax</description2>
+  <files>
+    <filename>mod_bgmax.xml</filename>
+    <filename module="mod_bgmax">mod_bgmax.php</filename>
+    <filename>index.html</filename>
+    <filename>helper.php</filename>
+    <filename>bgMax.min.js</filename>
+    <filename>bgMax.gif</filename>
+    <filename>tmpl/default.php</filename>
+    <filename>tmpl/index.html</filename>
+    <filename>elements/index.html</filename>
+    <filename>elements/filelistmakedir.php</filename>
+    <filename>elements/title.php</filename>
+  </files>
+  <languages folder="language">
+    <language tag="fr-FR">fr-FR/fr-FR.mod_bgmax.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.mod_bgmax.sys.ini</language>
+    <language tag="en-GB">en-GB/en-GB.mod_bgmax.ini</language>
+    <language tag="en-GB">en-GB/en-GB.mod_bgmax.sys.ini</language>
+  </languages>
+  <config>
+    <fields name="params" >
+      <fieldset name="basic" addfieldpath="/modules/mod_bgmax/elements/">
+        <field name="bgmaxDebug" type="list" default="0" label="Debug" description="DEBUG_DESC">
+          <option value="0">DEBUG_NO</option>
+          <option value="1">DEBUG_YES</option>
+          <option value="2">DEBUG_CONNECT</option>
+        </field>
+
+        <field type="title" label="IMG_TITRE" style="STYLE_BOX" />
+        <field type="title" label="IMG_NOTE" style="color:#666; margin:0;" />
+		<field name="image_path" type="media"
+				hide_default="1"  size="40"
+				label="IMAGE" description="IMAGE_DESC" />
+		<field name="image_url" type="text"  size="40"
+				label="URL" description="URL_DESC" />
+        <field name="RandomFolder" type="folderlist" default="" 
+			label="RANDOM" description="RANDOM_DESC" directory="images/bgmax" hide_default="true" />
+        <field type="title" label="RAMDOM_INFO" style="color:#666; margin:0;" />
+
+    		<field name="bodyColor" type="color" label="BODYCOLOR" description="BODYCOLOR_DESC" />	
+    		<field name="bodyColorAuto" type="radio" default="0" label="BODYCOLORAUTO"
+    			description="BODYCOLORAUTO_DESC">
+    			<option value="0">NO_LIB</option>
+    			<option value="1">YES_LIB</option>
+    		</field>
+        <field type="title" label="COLORAUTOYES" style="color:red; margin:0 0 15px 145px;" />
+    		
+    		<field type="title" label="POS_TITRE" style="STYLE_BOX"/>
+    		<field name="mode" type="list" default="max" label="MODE"
+    			description="MODE_DESC">
+    			<option value="max">MODE_MAX</option>
+    			<option value="full">MODE_FULL</option>
+    			<option value="no-repeat">MODE_NONE</option>
+    			<option value="repeat">MODE_REPEAT</option>
+    			<option value="repeat-x">MODE_REPEATX</option>
+    			<option value="repeat-y">MODE_REPEATY</option>
+    			<option value="cover">MODE_COVER</option>
+    		</field>
+    		<field name="position" type="list" default="absolute" label="POSITION"
+    			description="POSITION_DESC">
+    			<option value="absolute">POSITION_ABS</option>
+    			<option value="fixed">POSITION_FIX</option>
+    		</field>
+    		<field name="align" type="list" default="center" label="ALIGN"
+    			description="ALIGN_DESC">
+    			<option value="left">ALIGN_LEFT</option>
+    			<option value="center">ALIGN_CENTER</option>
+    			<option value="right">ALIGN_RIGHT</option>
+    		</field>
+    		<field name="vertAlign" type="list" default="top" label="VERTALIGN"
+    			description="VERTALIGN_DESC">
+    			<option value="top">VALIGN_TOP</option>
+    			<option value="center">VALIGN_CENTER</option>
+    			<option value="bottom">VALIGN_BOTTOM</option>
+    		</field>
+			<field type="title" label="JS_ONLY" style="color:blue;" />
+			<field name="enlarge" type="radio" default="1" label="ENLARGE"
+    			description="ENLARGE_DESC">
+    			<option value="0">NO_LIB</option>
+    			<option value="1">AUTHORIZED</option>
+    		</field>
+    		<field name="reduce" type="radio" default="0" label="REDUCE"
+    			description="REDUCE_DESC">
+    			<option value="0">NO_LIB</option>
+    			<option value="1">AUTHORIZED</option>
+    		</field>
+    		<field name="zIndex" type="text" default="-1" size="5"
+    			label="ZINDEX" description="ZINDEX_DESC" />	
+    		<field name="ffHack" type="text" default="0px" size="5"
+    			label="FFHACK" description="FFHACK_DESC" />	
+    			
+    		<field type="title" label="FADE_TITRE" style="STYLE_BOX"/>
+    		<field name="fadeActive" type="radio" default="0" label="FADEACTIVE" description="FADEACTIVE_DESC">
+    			<option value="0">NO_LIB</option>
+    			<option value="1">YES_LIB</option>
+    		</field>
+    		<field name="fadeAfter" type="text" default="0" size="5"
+    			label="FADEAFTER" description="FADEAFTER_DESC" />	
+    		<field name="fadeDuration" type="text" default="1000"  size="5"
+    			label="FADEDURATION" description="FADEDURATION_DESC" />	
+    		<field name="fadeFrameRate" type="text" default="30" size="5"
+    			label="FADEFRAMERATE" description="FADEFRAMERATE_DESC" />	
+    			
+    		<field type="title" label="CONTENT_TITRE" style="STYLE_BOX" />
+    		<field name="contentSelector" type="text" default=""  size="60"
+    			label="CONTENTSELECTOR" description="CONTENTSELECTOR_DESC" />	
+    		<field name="contentColor" type="color" 
+    			label="CONTENTCOLOR" description="CONTENTCOLOR_DESC" />	
+    		<field name="contentOpacity" type="text" default="100%"  size="10"
+    			label="CONTENTOPACITY" description="CONTENTOPACITY_DESC" />	
+    		<field name="contentWidth" type="text" default=""  size="10"
+    			label="CONTENTWIDTH" description="CONTENTWIDTH_DESC" />	
+    		<field name="contentAlign" type="list" default="center"
+				label="CONTENTALIGN" description="CONTENTALIGN_DESC">
+    			<option value="left">ALIGN_LEFT</option>
+    			<option value="center">ALIGN_CENTER</option>
+    			<option value="right">ALIGN_RIGHT</option>
+    		</field>
+
+    		<field type="title" label="HEAD_TITRE" style="STYLE_BOX"/>
+    		<field name="headOther" type="textarea" filter="raw" disabled="false" default="" rows="8" cols="60" label="HEADOTHER" description="HEADOTHER_DESC" />	
+    		<field name="headFile" type="filelistmakedir" label="HEADFILE" description="HEADFILE_DESC" directory="images/bgmax" filter="\.txt" hide_default="true" />
+            
+    		<field type="title" label="FILTER_TITRE" style="STYLE_BOX"/>
+    		<field name="filterMobile" type="list" default="always"
+				label="FILTER_MOBILE_LABEL" description="FILTER_MOBILE_DESC">
+    			<option value="always">FILTER_ALWAYS</option>
+    			<option value="mobile">FILTER_MOBILE</option>
+    			<option value="desktop">FILTER_DESKTOP</option>
+    		</field>
+    		<field name="filterContent" type="textarea" default="" rows="4" cols="60" label="FILTER_LABEL" description="FILTER_DESC" />	
+    		<field type="title" label="FILTER_NOTE" style="margin:10px 0;"/>
+
+    		<field type="title" label="PERIOD_DESC" style="STYLE_BOX"/>
+    		<field type="title" label="PERIOD_DESC_2" style="margin:10px 30px;"/>
+    		<field name="debDate" type="text" default=""
+    			label="DEBDATE" description="DEBDATE_DESC" />	
+    		<field name="debTime" type="text" default="" size="5" format="99:99"
+    			label="DEBTIME" description="DEBTIME_DESC" />	
+    		<field name="endDate" type="text" default=""
+    			label="ENDDATE" description="ENDDATE_DESC" />	
+    		<field name="endTime" type="text" default="" size="5" format="99:99"
+    			label="ENDTIME" description="ENDTIME_DESC" />
+    		<field name="period_mode" type="radio" default="0" label="PERIOD_MODE" description="PERIOD_MODE_DESC">
+    			<option value="0">NO_LIB</option>
+    			<option value="1">YES_LIB</option>
+    		</field>
+
+      </fieldset>
+    </fields>
+  </config>
+</extension>
