@@ -1,0 +1,153 @@
+/*---------------------------------------------------------------
+# Package - Joomla Template based on Sboost Framework   
+# ---------------------------------------------------------------
+# Author - mixwebtemplates http://www.mixwebtemplates.com
+# Copyright (C) 2008 - 2015 mixwebtemplates.com. All Rights Reserved.
+# Websites: http://www.mixwebtemplates.com
+-----------------------------------------------------------------*/
+
+body{font-size:13px;}
+.mx-base {width: 960px;} 
+#tophead, #bottsite, #header, #wrapper, #bottomspot {min-width: 960px; margin: 0 auto}
+#mx-leftcol {width: 25%} 
+#mx-rightcol { width: 27%} 
+#mx-sideleft {width: 20%}
+#mx-sideright { width: 30%}
+
+#wrapper { color: #444; background-color: #fafafa; }
+#bottsite { color: #fff; background-color: #666; }
+#bottomspot {  color: #bbb;  background-color: #333;}
+#bottomspot h3 { text-align: center; margin-top: 10px; background: none;}
+
+.jul-formregistration, .jul-formlogin { color: #222; }
+
+h1,h2,h3,h4, .very_big_white, .big_black { font-weight:300;}
+/*Social icons---------------*/
+
+.social-icons {
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+}
+.social-icons li {
+    display: inline-block;
+    border-radius: 50%;
+    width: 32px;
+    height: 28px;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 3px;
+    background: #fff;
+    padding-top: 4px;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -ms-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+	box-shadow:0 0 3px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow:0 0 3px rgba(0,0,0,0.2);
+}
+.social-icons li a {
+    display: block;
+    color: #555;
+    font-size: 21px;
+    overflow: hidden;
+    height: 21px;  
+}
+.social-icons li i{
+    display: block;
+    position: relative;
+     moz-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+}
+.social-icons li a .top{
+    top:-21px;
+}
+.social-icons li a .bottom{
+    top:-21px;
+}
+.social-icons li a:hover .bottom{
+    top:21px;
+}
+.social-icons li a:hover .top{
+    top:0px;
+}
+	
+.mx_date { padding: 5px 0px;}
+
+#menuout .mx-inner,
+#mx-banner .mx-inner, #mx-header  .mx-inner {
+	padding:0;
+}
+#mx-search { height: 46px;}
+#mx-bottom a{ color: #999; background: transparent;}
+#mx-bottom li a{ padding: 7px 0px; border-bottom: 1px solid #777;}
+.mx_date{float:left;margin-top:8px}
+.form-actions{padding:2px 4px 2px;margin-top:5px;margin-bottom:5px;background: transparent;border-top:1px solid #fff;*zoom:1;}	
+#hormenu ul li .submenu-inner,#sublevel ul li .submenu-inner { padding: 3px; margin: 1px 3px 3px 3px; border: 1px solid #ccc;
+	box-shadow:0 0 3px rgba(0,0,0,0.1);
+	-moz-box-shadow:0 0 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow:0 0 3px rgba(0,0,0,0.1);}
+input{width:90%;}
+textarea{width:98%;}
+.quick_contact input{width:80%;}
+#contact-form input{width:40%;}
+#user-registration input, #member-registration input, .login input{width:230px;}
+.pagenav a,.pager a{display:inline-block;padding:4px 14px;background-color:#fff;border:1px solid #ddd;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;background:#fafafa; border-bottom:1px solid #dadada;
+	background-image: -webkit-linear-gradient(top,  #fff, #e6e6e6);
+	background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
+	background-image: -ms-linear-gradient(top, #fff, #e6e6e6);
+	background-image: -o-linear-gradient(top, #fff, #e6e6e6);}
+.pager a:hover{text-decoration:none;background:#f5f5f5; border-bottom:1px solid #dadada;
+	background-image: -webkit-linear-gradient(top,  #e6e6e6, #fff);
+	background-image: -moz-linear-gradient(top, #e6e6e6, #fff);
+	background-image: -ms-linear-gradient(top, #e6e6e6, #fff);
+	background-image: -o-linear-gradient(top, #e6e6e6, #fff);}
+a#pagetop{float:right;padding: 4px 10px;}	
+a#valdate{  font-size: 10px;padding: 2px 5px; }	
+	
+.jlogin1 {float:left;width:40%;margin-right:12px;}
+.jlogin2 {float:left;width:50%;margin-top:14px;color:#999;}
+.jlogintext {float:left;margin:0 12px 12px 0;}
+
+.contactForm legend  { font-size: 12px !important;}
+#mx-rightcol .control-group { font-size: 12px !important; margin-left: -70px !important;}
+
+#mx-rightcol input { width: 95% !important;}
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.gallery  {
+    margin: 0;
+  }
+  @media (max-width: 767px) {
+body {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  }  
+  a{color:#cc3300}
+a:hover,a:active,a:focus{color:#585858}
+/*main menu*/
+#mx-bottom a:hover{color:#cc3300 }
+.colors {background-color:#ffeeee;}
+.readmore, a.readmore {background:#cc3300;}
+#hormenu ul li .submenu-inner,#sublevel ul li .submenu-inner {border-top: 3px #cc3300 solid;}
+#hormenu ul.level-0 > li.menu-item:hover > a.menu-item,
+#hormenu ul.level-0 > li.menu-item.active> a.menu-item { color:#cc3300}	
+#tophead { background-color:#cc3300;}
+.tp-caption.very_big_white, .tp-caption.buttons a, .myNews .profPeople:hover .profile { background-color:#cc3300 !important;}
+.social-icons li a .top, .social-employee li a .top { color: #c00; }
+.btn-primary {
+  background-image: -webkit-linear-gradient(top, #cc3300 0%, #cc0000 100%);
+  background-image: linear-gradient(to bottom, #cc3300 0%, #cc0000 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc3300', endColorstr='#cc0000', GradientType=0);
+  border-color: #cc3300;
+}

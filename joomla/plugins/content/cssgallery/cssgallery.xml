@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>CSS Gallery</name>
+	<author>Andreas Berger</author>
+	<creationDate>2013-08-18</creationDate>
+	<copyright>Copyright (C) 2013 Andreas Berger - http://www.bretteleben.de. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>andreas_berger@bretteleben.de</authorEmail>
+	<authorUrl>www.bretteleben.de</authorUrl>
+	<version>1.3.7</version>
+	<description>PLG_CSSG_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="cssgallery">cssgallery.php</filename>
+		<folder>files</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_content_cssgallery.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_cssgallery.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="plugins/content/cssgallery/files/">
+				<field name="desc" type="bexml" view="intro" label="" description="" />
+	
+				<field name="gallery" type="bexml" view="gallery" label="" description="" />
+				<field name="im_width" type="text" default="400" size="5" label="PLG_CSSG_GALLERY_WIDTH" description="PLG_CSSG_GALLERY_WIDTH_DESC" />
+				<field name="im_height" type="text" default="300" size="5" label="PLG_CSSG_GALLERY_HEIGHT" description="PLG_CSSG_GALLERY_HEIGHT_DESC" />
+				<field name="im_quality" type="text" default="95" size="5" label="PLG_CSSG_IMG_QUALITY" description="PLG_CSSG_IMG_QUALITY_DESC" />
+				<field name="im_keep" type="list" default="keep" label="PLG_CSSG_IMG_CROP" description="PLG_CSSG_IMG_CROP_DESC">
+					<option value="keep">PLG_CSSG_IMG_CROP_KEEP</option>
+					<option value="crop">PLG_CSSG_IMG_CROP_CROP</option>
+				</field>
+				<field name="im_align" type="list" default="1" label="PLG_CSSG_GALLERY_ALIGN" description="PLG_CSSG_GALLERY_ALIGN_DESC">
+					<option value="2">PLG_CSSG_LEFT</option>
+					<option value="1">PLG_CSSG_CENTER</option>
+					<option value="0">PLG_CSSG_RIGHT</option>
+					<option value="3">PLG_CSSG_FLOATLEFT</option>
+					<option value="4">PLG_CSSG_FLOATRIGHT</option>
+				</field>
+				<field name="th_sort" type="list" default="0" label="PLG_CSSG_SORT" description="PLG_CSSG_SORT_DESC">
+					<option value="0">PLG_CSSG_SORT_AZ</option>
+					<option value="1">PLG_CSSG_SORT_ZA</option>
+					<option value="2">PLG_CSSG_SORT_OLD</option>
+					<option value="3">PLG_CSSG_SORT_NEW</option>
+					<option value="4">PLG_CSSG_SORT_RAND</option>
+				</field>
+				<field name="im_preload" type="radio" default="1" label="PLG_CSSG_PRLD" description="PLG_CSSG_PRLD_DESC">
+					<option value="1">PLG_CSSG_YES</option>
+					<option value="0">PLG_CSSG_NO</option>
+				</field>
+				<field name="im_fixstart" type="radio" default="1" label="PLG_CSSG_FIXSTART" description="PLG_CSSG_FIXSTART_DESC">
+					<option value="1">PLG_CSSG_YES</option>
+					<option value="0">PLG_CSSG_NO</option>
+				</field>
+
+				<field name="thumbs" type="bexml" view="thumbs" label="" description="" />
+				<field name="th_row" type="text" default="4" size="5" label="PLG_CSSG_THUMBSNUM" description="PLG_CSSG_THUMBSNUM_DESC" />
+				<field name="th_quality" type="text" default="80" size="5" label="PLG_CSSG_THUMB_QUAL" description="PLG_CSSG_THUMB_QUAL_DESC" />
+				<field name="th_space" type="text" default="5" size="5" label="PLG_CSSG_THUMB_SPACE" description="PLG_CSSG_THUMB_SPACE_DESC"/>
+				<field name="th_keep" type="list" default="keep" label="PLG_CSSG_THB_CROP" description="PLG_CSSG_THB_CROP_DESC">
+					<option value="keep">PLG_CSSG_THB_CROP_KEEP</option>
+					<option value="crop">PLG_CSSG_THB_CROP_CROP</option>
+				</field>
+				<field name="others" type="bexml" view="others" label=" " description="" />
+				<field name="cap_show" type="radio" default="1" label="PLG_CSSG_SHOWCAP" description="PLG_CSSG_SHOWCAP_DESC">
+					<option value="1">PLG_CSSG_YES</option>
+					<option value="0">PLG_CSSG_NO</option>
+				</field>
+				<field name="link_use" type="radio" default="1" label="PLG_CSSG_USELINKS" description="PLG_CSSG_USELINKS_DESC">
+					<option value="1">PLG_CSSG_YES</option>
+					<option value="0">PLG_CSSG_NO</option>
+				</field>
+				<field name="imagepath" type="text" default="/images/" size="50" label="PLG_CSSG_IMGROOT" description="PLG_CSSG_IMGROOT_DESC" />
+				<field name="gd" type="bexml" view="gd" label=" " description="" />
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
